@@ -1,4 +1,4 @@
-# pagina_CEMEX_T5SOFT
+# Proyecto con socio formador (Ciclo 1)
 Proyecto de página web de T5 SOFTWARE
 
 Alumnos:
