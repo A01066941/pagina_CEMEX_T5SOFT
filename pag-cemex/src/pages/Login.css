@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(
+    150deg,
+    #8f190e 23.08%,
+    #002e4f 23.08%,
+    #002e4f 34.62%,
+    #194260 34.62%,
+    #194260 50%,
+    #8f190e 50%,
+    #8f190e 73.08%,
+    #002e4f 73.08%,
+    #002e4f 84.62%,
+    #194260 84.62%,
+    #194260 100%
+  );
+  background-size: 165% 165%;
+}
+
+.flex-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.login-backdrop {
+  height: 100%;
+  background-color: white;
+}
+
+#logo {
+  max-width: 400px;
+  /* overflow: hidden */
+  height: auto;
+  width: auto;
+  position: relative;
+  max-width: 100%;
+  /* object-fit: cover; */
+}
