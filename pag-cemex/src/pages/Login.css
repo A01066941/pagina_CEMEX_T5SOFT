@@ -1,8 +1,9 @@
-html {
+html,
+body {
     height: 100%;
 }
 
-body {
+#login-page {
     background-image: linear-gradient(
         150deg,
         #9a2f26 23.08%,
@@ -20,19 +21,19 @@ body {
     background-size: 165% 165%;
 }
 
-.login-backdrop {
+#login-backdrop {
     height: 100%;
     background-color: white;
 }
 
-#logo {
+#login-logo {
     height: auto;
     width: auto;
     max-width: 300px;
     display: block;
 }
 
-.flex-container {
+#login-column {
     display: flex;
     align-items: center;
     align-self: center;
@@ -41,23 +42,20 @@ body {
     padding: 0;
     margin: 0;
     flex-direction: column;
-}
-
-.login-column {
     padding: 50px 50px;
 }
 
-.login-title {
-    text-align: center;
-}
-
-.login-form {
+#login-form {
     width: 100%;
     padding-top: 160px;
     padding-bottom: 60px;
 }
 
-.login-form,
+#login-title {
+    text-align: center;
+}
+
+#login-form,
 #loginButton {
     max-width: 400px;
 }

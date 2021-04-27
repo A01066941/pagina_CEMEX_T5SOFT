@@ -1,33 +1,18 @@
-import React, { useEffect } from 'react';
+import { React } from 'react';
+import { Redirect, withRouter } from 'react-router-dom';
 // import AuthService from './Services/AuthService'
-import { Redirect, Route } from 'react-router-dom';
+import RegularRoute from './RegularRoute';
 
-const AuthenticatedRoute = ({ title, component: Component, ...rest }) => {
-    useEffect(() => {
-        document.title = 'CEMEX' + (title === undefined ? '' : ` – ${title}`);
-    });
-
-    //   const isLoggedIn = AuthService.isLoggedIn()
-    const isLoggedIn = getCookie('logged') !== null;
-
-    return (
-        <Route
-            {...rest}
-            render={(props) =>
-                isLoggedIn ? (
-                    <Component {...props} />
-                ) : (
-                    <Redirect
-                        to={{
-                            pathname: '/login',
-                            state: { from: props.location },
-                        }}
-                    />
-                )
-            }
-        />
-    );
-};
+class AuthenticatedRoute extends RegularRoute {
+    render() {
+        const isLoggedIn = getCookie('logged') !== null;
+        if (isLoggedIn) {
+            return super.render();
+        } else {
+            return <Redirect to='/login' />;
+        }
+    }
+}
 
 // Funcion TEMPORAL para leer cookie de sesion iniciada
 function getCookie(name) {
@@ -47,4 +32,4 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
-export default AuthenticatedRoute;
+export default withRouter(AuthenticatedRoute);

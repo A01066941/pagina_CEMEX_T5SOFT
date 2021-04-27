@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import './Login.css';
 import { Row, Col, Image, Form, Button } from 'react-bootstrap';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
     const history = useHistory();
@@ -29,15 +29,15 @@ function Login() {
                     md={{ span: 8, offset: 4 }}
                     sm={{ span: 10, offset: 2 }}
                 >
-                    <div className='login-backdrop'>
-                        <div className='login-column flex-container'>
+                    <div id='login-backdrop'>
+                        <div id='login-column'>
                             <Image
                                 src='/img/cemex.png'
-                                alt='Logo CEMEX'
-                                id='logo'
+                                alt='Logotipo CEMEX'
+                                id='login-logo'
                             />
-                            <Form className='login-form'>
-                                <p className='login-title'>
+                            <Form id='login-form'>
+                                <p id='login-title'>
                                     Ingresa tus datos para iniciar sesión
                                 </p>
                                 <br />
@@ -85,7 +85,7 @@ function fakeLogin(userOrEmail, password) {
     console.log(`Submitted user or email: ${userOrEmail}`);
     console.log(`Submitted password: ${password}`);
 
-    document.cookie = `logged=${userOrEmail};max-age=60;path=/;`;
+    document.cookie = `logged=${userOrEmail};max-age=900;path=/;`;
 }
 
 export default Login;

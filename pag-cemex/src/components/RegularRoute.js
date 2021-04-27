@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-
 import { Route } from 'react-router-dom';
 
-const RegularRoute = ({ title, ...rest }) => {
-    useEffect(() => {
-        document.title = 'CEMEX' + (title === undefined ? '' : ` – ${title}`);
-    });
-
-    return <Route {...rest} />;
-};
+class RegularRoute extends Route {
+    render() {
+        document.title =
+            'CEMEX' +
+            (this.props.title === undefined ? '' : ` – ${this.props.title}`);
+        console.log('RENDERED ROUTE ' + this.props.title);
+        return super.render();
+    }
+}
 
 export default RegularRoute;

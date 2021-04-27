@@ -23,24 +23,26 @@ function App() {
                     />
                     <div>
                         <Navbar />
-                        <AuthenticatedRoute
-                            path='/'
-                            title='Página principal'
-                            exact
-                            component={Home}
-                        />
-                        <AuthenticatedRoute
-                            path='/juego'
-                            title='Juego'
-                            exact
-                            component={Juego}
-                        />
-                        <AuthenticatedRoute
-                            path='/user'
-                            title='Usuario'
-                            exact
-                            component={User}
-                        />
+                        <Switch>
+                            <AuthenticatedRoute
+                                path='/'
+                                title='Página principal'
+                                exact
+                                component={Home}
+                            />
+                            <AuthenticatedRoute
+                                path='/juego'
+                                title='Juego'
+                                exact
+                                component={Juego}
+                            />
+                            <AuthenticatedRoute
+                                path='/user'
+                                title='Pefil'
+                                exact
+                                component={User}
+                            />
+                        </Switch>
                     </div>
                 </Switch>
             </Router>
