@@ -1,7 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import LoggedRoute from './components/LoggedRoute'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import AuthenticatedRoute from './components/AuthenticatedRoute';
+import RegularRoute from './components/RegularRoute';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Juego from './pages/Juego';
 import User from './pages/User';
@@ -10,21 +11,41 @@ import Login from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
-    <>
-    <Router>
-        <Switch>
-          <Route exact path='/login' exact component={Login} />
-          <div>
-            <Navbar />
-            <LoggedRoute exact path='/' exact component={Home} />
-            <LoggedRoute path='/juego' exact component={Juego} />
-            <LoggedRoute path='/user' exact component={User} />
-          </div>
-        </Switch>
-    </Router>
-    </>
-  );
+    return (
+        <>
+            <Router>
+                <Switch>
+                    <RegularRoute
+                        path='/login'
+                        title='Iniciar sesión'
+                        exact
+                        component={Login}
+                    />
+                    <div>
+                        <Navbar />
+                        <AuthenticatedRoute
+                            path='/'
+                            title='Página principal'
+                            exact
+                            component={Home}
+                        />
+                        <AuthenticatedRoute
+                            path='/juego'
+                            title='Juego'
+                            exact
+                            component={Juego}
+                        />
+                        <AuthenticatedRoute
+                            path='/user'
+                            title='Usuario'
+                            exact
+                            component={User}
+                        />
+                    </div>
+                </Switch>
+            </Router>
+        </>
+    );
 }
 
 export default App;

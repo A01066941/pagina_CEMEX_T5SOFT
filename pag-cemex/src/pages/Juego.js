@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-function Juego()
-{
+function Juego() {
     return (
         <div className='juego'>
             <h1>Juego</h1>

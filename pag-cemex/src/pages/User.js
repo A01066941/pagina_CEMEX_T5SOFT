@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-function User()
-{
+function User() {
     return (
         <div className='user'>
             <h1>User</h1>
