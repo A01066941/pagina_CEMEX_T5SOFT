@@ -20,6 +20,12 @@ function Login() {
         history.push('/');
     }
 
+    function handleKeyPress(event) {
+        if (event.key === 'Enter' && validateForm()) {
+            handleSubmit(event);
+        }
+    }
+
     return (
         <div id='login-page'>
             <Row noGutters className='vh-100'>
@@ -48,6 +54,7 @@ function Login() {
                                         onChange={(e) =>
                                             setUserOrEmail(e.target.value)
                                         }
+                                        onKeyPress={handleKeyPress}
                                         placeholder='Usuario o correo electrónico'
                                     />
                                 </Form.Group>
@@ -58,6 +65,7 @@ function Login() {
                                         onChange={(e) =>
                                             setPassword(e.target.value)
                                         }
+                                        onKeyPress={handleKeyPress}
                                         placeholder='Contraseña'
                                     />
                                 </Form.Group>
