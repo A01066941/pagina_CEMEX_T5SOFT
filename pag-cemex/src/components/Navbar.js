@@ -4,7 +4,7 @@ import './Navbar.css';
 function Navbar() {
 
     return (
-    
+                <nav>
                     <ul class='navbar-nav'>
 
                         <li class ="nav-item">
@@ -75,7 +75,7 @@ function Navbar() {
                             </a> 
                         </li>
                     </ul>
-      
+                    </nav>
     );
 }
 

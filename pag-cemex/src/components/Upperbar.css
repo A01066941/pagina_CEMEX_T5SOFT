@@ -1,4 +1,5 @@
 #upper-nav-ul{
+    position: relative;
     padding: 0;
     margin:0;
     background-color: #bac6cf;
@@ -9,6 +10,7 @@
     align-items: center;
     padding: 0.1% 2%;
     justify-content: flex-end;  
+   z-index:999;
 }
 
 .logo{

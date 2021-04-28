@@ -1,20 +1,24 @@
-
-.navbar-nav { /*ul*/
+nav{
     position: fixed;
+    top:0px;
+}
+.navbar-nav { /*ul*/
     background-color:	#bac6cf;
     width: 5rem;
     height: 100vh;
     list-style: none;
-    padding: 0;
+    padding-top: 30px;
     margin: 0;
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
     align-items: center;
     transition: width 300ms ease;
 }
 
 .nav-item{ /*li*/
     margin-left: 2rem;
+    margin-top: 5%;
     width: 100%;
 }
 
@@ -24,10 +28,11 @@
 
 .nav-link{ /*icon + text href*/
     display: flex;
+    position:relative;
     display: row;
     align-items: center;
     height: 5rem;
-    filter: grayscale(100%) opacity(0.7);
+    filter: drop-shadow(0 0 0.0rem crimson);
     transition: 300ms;
     justify-content: center;
 }
@@ -41,24 +46,25 @@
 
 
 .nav-link:hover{
-   background-color: #5b5b5c46;
-   filter: grayscale(0%) opacity(1);
+   filter: drop-shadow(0 0 0.75rem crimson);
    width: 11rem;
 
 }
 
-.nav-link:hover .link-text{
+.navbar-nav:hover .link-text{/*spam titulo cuando se hace hover sobre el menu*/
     display: block;
     display: inline;
+    transition: 1000ms;
     
  }
-.link-text{ /*spam titulo*/
+.link-text{ 
     display: inline;
     display: none;
     margin-left: 3rem;
     color: black;
     font-size: 20px;
     font-family: 'Open Sans';
+
 
 }
 .navbar-nav:hover{
@@ -70,4 +76,3 @@
     display: inline;
     transition: display 300ms;
 }
-
