@@ -1,15 +1,15 @@
 import { React, useState } from 'react';
-import './Home.css';
+import './Ajustes.css';
 import { Row, Col, Image, Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
-function Home() {
+function Ajustes() {
     return (
-        <div class='home'>
-            <h1>Home</h1>
+        <div class='ajustes'>
+            <h1>Ajustes</h1>
         </div>
     );
 }
 
 
-export default Home;
+export default Ajustes;

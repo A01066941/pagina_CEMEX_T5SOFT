@@ -7,12 +7,15 @@ import Home from './pages/Home';
 import Juego from './pages/Juego';
 import User from './pages/User';
 import Login from './pages/Login';
+import Ajustes from './pages/Ajustes';
+import Upperbar from './components/Upperbar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (
         <>
+            
             <Router>
                 <Switch>
                     <RegularRoute
@@ -22,7 +25,9 @@ function App() {
                         component={Login}
                     />
                     <div>
-                        <Navbar />
+                        <Upperbar />
+                        <Navbar/>
+                      
                         <Switch>
                             <AuthenticatedRoute
                                 path='/'
@@ -42,7 +47,14 @@ function App() {
                                 exact
                                 component={User}
                             />
+                            <AuthenticatedRoute
+                                path='/ajustes'
+                                title='Ajustes'
+                                exact
+                                component={Ajustes}
+                            />
                         </Switch>
+                   
                     </div>
                 </Switch>
             </Router>

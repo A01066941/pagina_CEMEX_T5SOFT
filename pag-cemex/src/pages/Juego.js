@@ -1,8 +1,9 @@
 import React from 'react';
+import './Juego.css';
 
 function Juego() {
     return (
-        <div className='juego'>
+        <div class='juego'>
             <h1>Juego</h1>
         </div>
     );

@@ -1,0 +1,36 @@
+#upper-nav-ul{
+    padding: 0;
+    margin:0;
+    background-color: #bac6cf;
+    list-style: none;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.1% 2%;
+    justify-content: flex-end;  
+}
+
+.logo{
+    height:40px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+#log-out svg{
+    color:black;
+    height: 4rem;
+    width: 2rem;
+    margin-left: 15%;
+}
+
+#user-data{
+    list-style: none;
+    margin-left: -10%;
+}
+
+.profile{
+    width: 50px; 
+    cursor:pointer;
+    margin-left: -25%;
+}

@@ -1,72 +1,73 @@
-.navbar {
-    background-color: brown;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-.menu-bars {
-    margin-left: 2rem;
-    font-size: 2rem;
-    background: none;
-}
-
-.nav-menu {
-    background-color: brown;
-    width: 250px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+.navbar-nav { /*ul*/
     position: fixed;
-    top: 0;
-    left: -100%;
-    transition: 850ms;
-}
-
-.nav-menu.active {
-    left: 0;
-    transition: 350ms;
-}
-
-.nav-text {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 8px 0px 8px 16px;
+    background-color:	#bac6cf;
+    width: 5rem;
+    height: 100vh;
     list-style: none;
-    height: 60px;
-}
-
-.nav-text a {
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 18px;
-    width: 95%;
-    height: 100%;
+    padding: 0;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0 16px;
-    border-radius: 4 px;
+    transition: width 300ms ease;
 }
 
-.nav-text a:hover {
-    background-color: blue;
-}
-
-.nav-menu-items {
+.nav-item{ /*li*/
+    margin-left: 2rem;
     width: 100%;
 }
 
-.navbar-toggle {
-    background-color: midnightblue;
-    width: 100px;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.navbar-nav:last-child{
+    margin-top: auto;
 }
 
-span {
-    margin-left: 16px;
+.nav-link{ /*icon + text href*/
+    display: flex;
+    display: row;
+    align-items: center;
+    height: 5rem;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 300ms;
+    justify-content: center;
 }
+
+.nav-link svg{
+    color:black;
+    width: 2rem;
+    min-width: 1rem;
+    margin: 0  0rem;
+  }
+
+
+.nav-link:hover{
+   background-color: #5b5b5c46;
+   filter: grayscale(0%) opacity(1);
+   width: 11rem;
+
+}
+
+.nav-link:hover .link-text{
+    display: block;
+    display: inline;
+    
+ }
+.link-text{ /*spam titulo*/
+    display: inline;
+    display: none;
+    margin-left: 3rem;
+    color: black;
+    font-size: 20px;
+    font-family: 'Open Sans';
+
+}
+.navbar-nav:hover{
+    width: 12rem;
+}
+
+.navbar:hover .link-text{ /*muestra el texto*/
+    display: block; 
+    display: inline;
+    transition: display 300ms;
+}
+
