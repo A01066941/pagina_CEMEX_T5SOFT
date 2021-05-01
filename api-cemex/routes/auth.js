@@ -23,8 +23,9 @@ router.get(
 
 router.post('/login', async (req, res, next) => {
     try {
-        const userOrEmail = req.body.userOrEmail;
-        const password = req.body.password;
+        const data = req.body;
+        const userOrEmail = data.body.userOrEmail;
+        const password = data.body.password;
         if (userOrEmail === undefined || password === undefined) {
             return res.status(StatusCodes.BAD_REQUEST).send({
                 error: 'No user or email, or no password specified',
@@ -56,7 +57,8 @@ router.post('/login', async (req, res, next) => {
 
 router.post('/refresh', (req, res, next) => {
     try {
-        const refreshToken = req.body.refresh;
+        const data = req.body;
+        const refreshToken = data.body.refresh;
         if (refreshToken === undefined) {
             return res.status(StatusCodes.BAD_REQUEST).send({
                 error: 'Missing refresh token',

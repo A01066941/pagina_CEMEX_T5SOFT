@@ -1,35 +1,49 @@
 import { React } from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
-// import AuthService from './Services/AuthService'
+import { Spinner } from 'react-bootstrap';
+import authService from '../api/authService';
 import RegularRoute from './RegularRoute';
 
 class AuthenticatedRoute extends RegularRoute {
-    render() {
-        const isLoggedIn = getCookie('logged') !== null;
-        if (isLoggedIn) {
-            return super.render();
-        } else {
-            return <Redirect to='/login' />;
-        }
-    }
-}
+    state = {
+        loading: true,
+        isAuthenticated: false,
+    };
 
-// Funcion TEMPORAL para leer cookie de sesion iniciada
-function getCookie(name) {
-    var dc = document.cookie;
-    var prefix = name + '=';
-    var begin = dc.indexOf('; ' + prefix);
-    if (begin === -1) {
-        begin = dc.indexOf(prefix);
-        if (begin !== 0) return null;
-    } else {
-        begin += 2;
-        var end = document.cookie.indexOf(';', begin);
-        if (end === -1) {
-            end = dc.length;
-        }
+    componentDidMount() {
+        authService.isValidSession().then((isAuthenticated) => {
+            this.setState({
+                loading: false,
+                isAuthenticated: isAuthenticated,
+            });
+        });
     }
-    return decodeURI(dc.substring(begin + prefix.length, end));
+
+    render() {
+        // const { component: Component } = this.props;
+        if (this.state.loading) {
+            // TODO: una mejor página de carga
+            return (
+                <Spinner
+                    className='text-center loading-spinner'
+                    animation='border'
+                />
+            );
+        } else {
+            console.log(this.state);
+            if (this.state.isAuthenticated) {
+                return super.render();
+            } else {
+                return <Redirect to='/login' />;
+            }
+        }
+
+        // if (isLoggedIn) {
+        //     return super.render();
+        // } else {
+        //     return <Redirect to='/login' />;
+        // }
+    }
 }
 
 export default withRouter(AuthenticatedRoute);

@@ -1,7 +1,8 @@
 import { React, useState } from 'react';
-import './Login.css';
 import { Row, Col, Image, Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import authService from '../api/authService';
+import './Login.css';
 
 function Login() {
     const history = useHistory();
@@ -13,11 +14,16 @@ function Login() {
         return userOrEmail.length > 0 && password.length > 0;
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        fakeLogin(userOrEmail, password);
+    async function handleSubmit(event) {
+        try {
+            event.preventDefault();
+            await authService.logIn(userOrEmail, password);
 
-        history.push('/');
+            history.push('/');
+        } catch (err) {
+            console.error(err);
+            // TODO: display some error
+        }
     }
 
     function handleKeyPress(event) {
@@ -86,14 +92,6 @@ function Login() {
             </Row>
         </div>
     );
-}
-
-function fakeLogin(userOrEmail, password) {
-    console.warn('LOGIN NOT IMPLEMENTED');
-    console.log(`Submitted user or email: ${userOrEmail}`);
-    console.log(`Submitted password: ${password}`);
-
-    document.cookie = `logged=${userOrEmail};max-age=900;path=/;`;
 }
 
 export default Login;
