@@ -13,6 +13,7 @@ import Upperbar from './components/Upperbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+    
     return (
         <>
             
@@ -27,10 +28,7 @@ function App() {
                     <div>
                        <Upperbar />
                        <Navbar/>
-                        
-                        
-                      
-                        <Switch>
+                       <Switch>
                             <AuthenticatedRoute
                                 path='/'
                                 title='Página principal'
@@ -55,7 +53,7 @@ function App() {
                                 exact
                                 component={Ajustes}
                             />
-                        </Switch>
+                       </Switch>
                    
                     </div>
                 </Switch>

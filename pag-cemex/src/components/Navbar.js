@@ -4,9 +4,9 @@ import './Navbar.css';
 function Navbar() {
 
     return (
-                <nav>
+            
+                <navbar>
                     <ul class='navbar-nav'>
-
                         <li class ="nav-item">
                             <a href='/' class='nav-link'>
                                 <svg 
@@ -15,7 +15,7 @@ function Navbar() {
                                 focusable="false" 
                                 data-prefix="fas" 
                                 data-icon="home" 
-                                class="icon" 
+                              
                                 role="img" 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 viewBox="0 0 576 512">
@@ -31,7 +31,7 @@ function Navbar() {
                             focusable="false" 
                             data-prefix="fas" 
                             data-icon="gamepad" 
-                            class="icon" 
+                         
                             role="img" 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 640 512">
@@ -48,7 +48,7 @@ function Navbar() {
                             focusable="false" 
                             data-prefix="fas" 
                             data-icon="user" 
-                            class="icon" 
+                            
                             role="img" 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 448 512"><path 
@@ -64,7 +64,7 @@ function Navbar() {
                             focusable="false" 
                             data-prefix="fas" 
                             data-icon="cogs" 
-                            class="svg-inline--fa fa-cogs fa-w-20" 
+                           
                             role="img" 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 640 512">
@@ -75,7 +75,8 @@ function Navbar() {
                             </a> 
                         </li>
                     </ul>
-                    </nav>
+                    </navbar>
+                
     );
 }
 
