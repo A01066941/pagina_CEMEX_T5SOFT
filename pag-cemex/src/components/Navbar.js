@@ -26,7 +26,7 @@ function Navbar() {
                         </li>
 
                         <li class ="nav-item">
-                            <a href='/juegos' class='nav-link'>
+                            <a href='/juego' class='nav-link'>
                             <svg aria-hidden="true" 
                             focusable="false" 
                             data-prefix="fas" 

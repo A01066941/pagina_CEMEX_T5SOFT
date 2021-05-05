@@ -16,7 +16,7 @@
     width: 12rem;
 }
 .nav-item:last-child{
-    margin-top: 850px;
+    margin-top: 583px;
 }
 
 .nav-item{ /*li*/
@@ -97,7 +97,7 @@ span.link-text{
         justify-content: space-around !important;
         position: relative;
         align-items: flex-start !important;
-        margin-top: -27%;
+        margin-top: -40%;
         align-self: baseline;
     }
     .nav-item:last-child{

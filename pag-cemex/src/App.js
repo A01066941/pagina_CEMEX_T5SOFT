@@ -26,7 +26,7 @@ function App() {
                         component={Login}
                     />
                     <div>
-                       <Upperbar />
+                       <Upperbar/>
                        <Navbar/>
                        <Switch>
                             <AuthenticatedRoute

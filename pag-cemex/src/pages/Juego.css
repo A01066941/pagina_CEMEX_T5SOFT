@@ -1,8 +1,124 @@
-.juego {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    margin-left: 5rem;
+body{
+    background: linear-gradient(
+            150deg,
+            #9a2f26 23.08%,
+            #002e4f 23.08%,
+            #002e4f 34.62%,
+            #194260 34.62%,
+            #194260 50%,
+            #9a2f26 50%,
+            #9a2f26 73.08%,
+            #002e4f 73.08%,
+            #002e4f 84.62%,
+            #194260 84.62%,
+            #194260 100%
+    );
+    background-size: 165% 165%;
+}
+
+.content{
+    margin-left: -28%;
+}
+
+.unityScreen{
+
+    background-color: black !important;
+
+    margin-right:5rem;
+    margin-left:4rem;
+    margin-top:5rem;
+
+    height: 27rem;
+
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    width: 25%;
+    float: right;
+    padding: 100px;
+
+
+}
+
+.leftHub{
+    background-color: white;
+
+    margin: 10rem auto;
+    margin-right: 2rem;
+    margin-top:5rem;
+
+    height: 40rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+
+    width: 20%;
+    float: right;
+    padding: 20px;
+
+}
+.rightHub{
+    background-color: white;
+
+    margin: 10rem auto;
+    margin-top:5rem;
+    margin-right:1rem;
+    margin-left: 2rem;
+
+
+
+    height: 40rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+
+    width: 20%;
+    float: right;
+    padding: 20px;
+}
+   .HubBox{
+    background-color: #013777;
+       height: 37rem;
+}
+
+
+.leaderBoard{
+    color:black;
+    text-align: center;
+    background-color: #013777;
+}
+
+.listItem{
+    background: white;
+    margin-top:1rem;
+    margin-right: 1rem;
+}
+
+.listItemL{
+    background: white;
+    margin-top:1rem;
+    margin-right: 1rem;
+}
+
+
+.instruccionesBox{
+    background-color: #9a2f26;
+    width: 15rem;
+    margin:1rem auto;
+
+}
+.instrucciones{
+    background-color: #9a2f26;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.picJuego{
+    width:30rem;
+    margin: 0;
+    margin-left: -32px;
+
 }
